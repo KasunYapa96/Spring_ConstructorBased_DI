@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd
+    http://www.springframework.org/schema/aop 
+    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+    ">
+ 
+ <!-- Definition for HelloBean Bean -->
+ 
+    <bean id="addr1" class="com.hcl.beans.Address">
+    	<property name="lane1" value="606,Kanda paara"> </property>
+    	<property name="city" value="Kataragama"> </property>
+    	<property name="pin" value="91400"> </property>
+        
+    </bean>
+    
+     <bean id="emp1" class="com.hcl.beans.Employee">
+    	<constructor-arg value="100"></constructor-arg>
+    	<constructor-arg value="Kasun Yapa"></constructor-arg>
+    	<constructor-arg value="60000"></constructor-arg>
+    	<constructor-arg ref="addr1"></constructor-arg>
+    </bean>
+    
+</beans>
